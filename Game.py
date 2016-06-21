@@ -4,7 +4,7 @@ from pygame.locals import *
 from Block import *
 
 WAITING_TIME=0
-FPS=2
+FPS=4
 GRAY=(200,200,200)
 WHITE=(255,255,255)
 BLACK=(0,0,0)
@@ -46,7 +46,7 @@ class Game(object):
         self.sprites = pygame.sprite.RenderUpdates()
         self.sprites_to_update=pygame.sprite.RenderUpdates()
 
-        self.block_grid=[[Block(BlockColor.Transparent,(0,0)) for y in range (0,GRID_SIZE_Y,1)] for x in range (0,GRID_SIZE_X,1)]#y is the y axis
+        self.block_grid=[[Block(5,(0,0)) for y in range (0,GRID_SIZE_Y,1)] for x in range (0,GRID_SIZE_X,1)]#y is the y axis
         x_coordinate= alternative_x_cordinate
         for i in range (0,GRID_SIZE_X,1):
             x_coordinate+=BLOCK_WIDTH
